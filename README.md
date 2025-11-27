@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-# 🧰 CCNA Lab Portfolio – Built in GNS3 & VMware
+# 🧰 CCNA Lab Portfolio – Built in GNS3 & Cisco Packet Tracer
 
 Welcome! I’m **Jahson Jno-Baptiste (JB)** — an IT professional and veteran, building my way into **network engineering & cybersecurity** through hands-on labs.  
 
