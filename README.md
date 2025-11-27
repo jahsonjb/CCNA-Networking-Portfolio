@@ -76,7 +76,7 @@ CCNA-Portfolio/
 ✔ NAT & PAT configuration  
 ✔ Systematic troubleshooting (ping, traceroute, show/debug)  
 ✔ Network documentation (configs, diagrams, markdown notes)  
-✔ Firewall + home lab design with pfSense  
+✔ Firewall + home lab design  
 
 ---
 
