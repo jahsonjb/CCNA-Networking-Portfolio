@@ -8,7 +8,7 @@ This repository is my **hands-on CCNA portfolio**, showcasing:
 - Configuration skills (switching, routing, security)  
 - Troubleshooting ability (broken → fixed labs)  
 - Documentation habits (configs, screenshots, markdown)  
-- Network design (home lab with pfSense)  
+- Network design (home labs with pfSense, VMware, and Cisco Packet Tracer)  
 
 ---
 
@@ -90,7 +90,7 @@ This repo shows:
 - **Documentation habits** (markdown + screenshots)  
 - **Initiative**: building labs without physical routers/switches  
 
-📌 *Built with GNS3, VMware, VPCS, pfSense, and open-source tools.*
+📌 *Built with GNS3, Cisco Packet Tracer, VMware, VPCS, pfSense, and open-source tools.*
 
 ---
 
