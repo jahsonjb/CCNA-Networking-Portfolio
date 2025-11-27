@@ -62,7 +62,7 @@ CCNA-Portfolio/
 - Intentionally broken labs to demonstrate **diagnosis + repair process**.  
 
 ### 🔸 Complete Network Designs
-- [Enterprise Network Labs](./enterprise-networks/)  
+- [Enterprise Networks](./enterprise-networks/)  
   Realistic design with segmentation, DHCP/DNS, and firewall zones.  
 
 ---
