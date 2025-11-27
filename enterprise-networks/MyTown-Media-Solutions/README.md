@@ -116,7 +116,7 @@ This repository will include the following uploaded files:
 * DHCP/DNS tests
 * TFTP backup demonstration
 
-### **3. `network-addressing-table.md`**
+### **3. `network-addressing-table.txt`**
 
 * Complete VLSM subnet table
 * VLAN-to-subnet mapping
