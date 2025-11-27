@@ -61,7 +61,7 @@ CCNA-Portfolio/
 - [Troubleshooting](./troubleshooting-scenarios/)
 - Intentionally broken labs to demonstrate **diagnosis + repair process**.  
 
-### 🔸 Network Designs
+### 🔸 Complete Network Designs
 - [Enterprise Network Labs](./network-designs/)  
   Realistic design with segmentation, DHCP/DNS, and firewall zones.  
 
