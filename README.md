@@ -36,8 +36,8 @@ CCNA-Portfolio/
 │    ├── acls/
 │    └── nat-pat/
 ├── troubleshooting-scenarios/
-└── network-designs/
-└── home-network/
+└── Enterprise-Network-Labs/
+
 
 ```
 
