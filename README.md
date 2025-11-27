@@ -62,7 +62,7 @@ CCNA-Portfolio/
 - Intentionally broken labs to demonstrate **diagnosis + repair process**.  
 
 ### 🔸 Network Designs
-- [Home Network (pfSense-based)](./network-designs/home-network/)  
+- [Enterprise Network Labs](./network-designs/home-network/)  
   Realistic design with segmentation, DHCP/DNS, and firewall zones.  
 
 ---
