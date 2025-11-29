@@ -104,6 +104,7 @@ Each lab will also be published as a **Medium article** (300–600 words) with:
 
 📎 Published so far:  
 - [VLAN & Inter-VLAN Routing – My First CCNA Lab in GNS3](https://medium.com/@jahsonjnobaptiste/vlan-inter-vlan-routing-my-first-ccna-lab-in-gns3-4aff816b53b6)
+- [Medium Size Enterprise Network Deployment - My First Deployment Using Cisco Packet Tracer](https://medium.com/@jahsonjnobaptiste/mytown-media-solutions-full-network-deployment-capstone-project-cd81954e5f22)
 
 ---
 
