@@ -36,7 +36,7 @@ PC1     PC2     PC3
 
 ```
 
-![Topology Layout](./nat-pat/overloading-lab/screenshots/NAT-ROUTER-TOPOLOGY.png)
+![Topology Layout](./screenshots/NAT-ROUTER-TOPOLOGY.png)
 
 ---
 
@@ -102,47 +102,47 @@ ip nat inside source list 10 interface GigabitEthernet0/0 overload
 ## Screenshot Summary (Markdown Image Format)
 
 ### 1. GNS3 Workspace Topology
-![GNS3 Topology](./nat-pat/overloading-lab/screenshots/NAT-ROUTER-TOPOLOGY.png)
+![GNS3 Topology](./screenshots/NAT-ROUTER-TOPOLOGY.png)
 
 ---
 
 ### 2. NAT Router — show ip interface brief
-![IP Interface Brief](./nat-pat/overloading-lab/screenshots/ip-int-brief.png)
+![IP Interface Brief](./screenshots/ip-int-brief.png)
 
 ---
 
 ### 3. Switch — show vlan brief
-![VLAN Brief](./nat-pat/overloading-lab/screenshots/vlan-brief.png)
+![VLAN Brief](./screenshots/vlan-brief.png)
 
 ---
 
 ### 4. Switch — show interfaces trunk
-![Interfaces Trunk](./nat-pat/overloading-lab/screenshots/int-trunk.png)
+![Interfaces Trunk](./screenshots/int-trunk.png)
 
 ---
 
 ### 5. NAT Section — show run | section nat
-![NAT Config Section](./nat-pat/overloading-lab/screenshots/Nat-config-section.png)
+![NAT Config Section](./screenshots/Nat-config-section.png)
 
 ---
 
 ### 6. NAT Translation Table — show ip nat translations
-![NAT Translation Table](./nat-pat/overloading-lab/screenshots/ip-nat-trans.png)
+![NAT Translation Table](./screenshots/ip-nat-trans.png)
 
 ---
 
 ### 7. Inside Hosts — Successful ping to outside
-![PC Success Ping](./nat-pat/overloading-lab/screenshots/pc-success-ping.png)
+![PC Success Ping](./screenshots/pc-success-ping.png)
 
 ---
 
 ### 8. Outside Host — Ping to Router Public IP
-![Outside Ping](./nat-pat/overloading-lab/screenshots/outside-ping.png)
+![Outside Ping](./screenshots/outside-ping.png)
 
 ---
 
 ### Additional NAT Statistics
-![NAT Stats](./nat-pat/overloading-lab/screenshots/nat-stats.png)
+![NAT Stats](./screenshots/nat-stats.png)
 
 ---
 
