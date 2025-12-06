@@ -204,7 +204,7 @@ Successful replies confirm:
 
 ---
 
-## 📸 **5. Recommended Screenshots for GitHub**
+## 📸 **5. Screenshots for this lab**
 
 Include:
 
