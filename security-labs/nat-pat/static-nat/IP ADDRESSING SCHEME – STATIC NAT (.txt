@@ -1,0 +1,33 @@
+IP ADDRESSING SCHEME – STATIC NAT (MLS SVI + R1 NAT + ISP)
+
+Inside LAN (VLAN 20)
+---------------------------------------------------------
+Device / Interface        IP Address          Subnet Mask          Notes
+MLS – SVI (VLAN20)        192.168.20.1        255.255.255.0        Default gateway for inside hosts
+Server                    192.168.20.50       255.255.255.0        Inside local (static NAT mapping)
+PC (optional)             192.168.20.10       255.255.255.0        Inside host
+Host Default Gateway      192.168.20.1        ----                 Points to MLS SVI
+
+MLS ↔ R1 Routed Link
+---------------------------------------------------------
+Device / Interface        IP Address          Subnet Mask          Notes
+R1 – G0/1 (inside)        192.168.30.1        255.255.255.252      NAT inside interface
+MLS – Routed Port         192.168.30.2        255.255.255.252      L3 uplink toward R1
+
+R1 ↔ ISP WAN Link
+---------------------------------------------------------
+Device / Interface        IP Address          Subnet Mask          Notes
+R1 – G0/0 (outside)       209.165.200.225     255.255.255.248      NAT outside interface
+ISP Router – G0/0         209.165.200.230     255.255.255.248      WAN interface
+
+Public NAT IP
+---------------------------------------------------------
+Device / Interface        IP Address          Subnet Mask          Notes
+Static NAT Global IP      209.165.200.226     255.255.255.248      Public IP mapped to 192.168.20.50
+
+Routing (Default Routes and Return Route)
+---------------------------------------------------------
+Device                    Route                                Notes
+MLS                       ip route 0.0.0.0 0.0.0.0 192.168.30.1   Default route toward R1
+R1                        ip route 0.0.0.0 0.0.0.0 209.165.200.230 Default route toward ISP
+ISP Router                ip route 192.168.20.0 255.255.255.0 209.165.200.225  Return route to inside LAN
