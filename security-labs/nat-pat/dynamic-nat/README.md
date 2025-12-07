@@ -109,7 +109,7 @@ Add the following to the existing NAT configuration from Scenario 1:
 
 ```bash
 ! Define the NAT pool
-ip nat pool NAT-POOL 209.165.200.227 209.165.200.229 netmask 255.255.255.248
+ip nat pool dynamicpool 209.165.200.227 209.165.200.229 netmask 255.255.255.248
 
 ! Match inside traffic leaving toward the ISP
 access-list 10 permit 192.168.20.0 0.0.0.255
