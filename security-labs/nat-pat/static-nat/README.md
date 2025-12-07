@@ -87,15 +87,15 @@ interface vlan 20
  ip address 192.168.20.1 255.255.255.0
  no shut
 
-interface g1/0/1
+interface fa0/1
  switchport mode access
  switchport access vlan 20
 
-interface g1/0/2
+interface fa0/2
  switchport mode access
  switchport access vlan 20
 
-interface g1/0/24
+interface g0/1
  no switchport
  ip address 192.168.30.2 255.255.255.252
  no shut
