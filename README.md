@@ -18,6 +18,7 @@ This repository is my **hands-on CCNA portfolio**, showcasing:
 
 CCNA-Portfolio/
 ├── switching-labs/
+     ├── stp/
 │    └── vlan-intervlan/
 │         ├── LAB_GUIDE.md
 |         |── vpcs-config.txt
@@ -47,7 +48,8 @@ CCNA-Portfolio/
 
 ### 🔸 Switching Labs
 - [VLAN & Inter-VLAN Routing](./switching-labs/vlan-intervlan/)  
-  Configure VLANs, router-on-a-stick, and troubleshoot common issues.  
+  Configure VLANs, router-on-a-stick, and troubleshoot common issues.
+- [STP](./switching-labs/stp/) 
 
 ### 🔸 Routing Labs
 - [Static & Dynamic Routing (OSPF focus)](./routing-labs/static-vs-ospf/)
