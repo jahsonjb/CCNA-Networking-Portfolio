@@ -1,0 +1,27 @@
+IP ADDRESSING SCHEME – EDGE ROUTER + MLS + ISP
+
+Inside LAN (VLAN 10 – 192.168.20.0/24)
+---------------------------------------------------------
+Device / Interface           IP Address         Subnet Mask         Notes
+MLS – SVI (VLAN 10)          192.168.20.1       255.255.255.0       Default gateway for inside hosts
+VPCS Host                    192.168.20.20      255.255.255.0       Inside host
+VPCS Default Gateway         192.168.20.1       ----                Points to MLS SVI
+
+Routed Link: MLS ↔ Edge Router (192.168.10.0/30)
+---------------------------------------------------------
+Device / Interface           IP Address         Subnet Mask         Notes
+Edge Router – G0/1           192.168.10.1       255.255.255.252     Toward MLS (inside-facing)
+MLS – Routed Port            192.168.10.2       255.255.255.252     L3 uplink toward Edge Router
+
+WAN Link: Edge Router ↔ ISP Router (209.165.200.224/30)
+---------------------------------------------------------
+Device / Interface           IP Address         Subnet Mask         Notes
+Edge Router – G0/0           209.165.200.225    255.255.255.252     WAN interface toward ISP
+ISP Router – G0/0            209.165.200.226    255.255.255.252     ISP-facing interface
+
+Network/Broadcast Summary
+---------------------------------------------------------
+Segment                      Network            Broadcast
+Inside LAN (VLAN 10)         192.168.20.0       192.168.20.255
+MLS–Edge Routed Link         192.168.10.0       192.168.10.3
+Edge–ISP WAN Link            209.165.200.224    209.165.200.227
