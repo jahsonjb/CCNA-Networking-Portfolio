@@ -79,11 +79,15 @@ A wrong default gateway stops packets at the source. Before I troubleshoot VLANs
 * Subnet mask
 * Default gateway
 
-![Topology](./topology.png)
-![Phase 1 PC Ping Fail](./screenshots/p1-pc-ping-fail.png)
-![Phase 1 CPT Simulation Mode](./screenshots/p1-cpt-sim-mode.png)
-![Phase 1 Wrong Gateway](./screenshots/p1-pc-wrong-gateway.png)
-![Phase 1 Ping Success](./screenshots/p1-pc-ping-success.png)
+![Topology](./screenshots/topology.png) Topology
+
+![Phase 1 PC Ping Fail](./screenshots/p1-pc-ping-fail.png) Phase 1 PC Ping Fail
+
+![Phase 1 CPT Simulation Mode](./screenshots/p1-cpt-sim-mode.png) Phase 1 CPT Simulation Mode
+
+![Phase 1 Wrong Gateway](./screenshots/p1-pc-wrong-gateway.png) Phase 1 Wrong Gateway
+
+![Phase 1 Ping Success](./screenshots/p1-pc-ping-success.png) Phase 1 Ping Success
 
 
 ---
@@ -184,11 +188,15 @@ After that:
 * Replies returned through the correct VLAN
 * Ping succeeded normally
 
-![Phase 2 Show Switch Interface](./screenshots/p2-show-sw-int.png)
-![Phase 2 VLAN Brief](./screenshots/p2-vlan-brief.png)
-![Phase 2 VLAN 10 Ping Fail](./screenshots/p2-vlan10-pingfail.png)
-![Phase 2 Ping Success #1](./screenshots/p2-ping-success.png)
-![Phase 2 Switchport Correction](./screenshots/p2-correct-sw-config.png)
+![Phase 2 Show Switch Interface](./screenshots/p2-show-sw-int.png) Phase 2 Show Switch Interface
+
+![Phase 2 VLAN Brief](./screenshots/p2-vlan-brief.png) Phase 2 VLAN Brief
+
+![Phase 2 VLAN 10 Ping Fail](./screenshots/p2-vlan10-pingfail.png) Phase 2 VLAN 10 Ping Fail
+
+![Phase 2 Ping Success #1](./screenshots/p2-ping-success.png) Phase 2 Ping Success
+
+![Phase 2 Switchport Correction](./screenshots/p2-correct-sw-config.png) Phase 2 Switchport Correction
 
 ---
 
@@ -313,9 +321,11 @@ Immediately:
 * OSPF tables updated
 * Pings to `192.168.20.1` succeeded again
 
-![Phase 3 R2 Ping Fail](./screenshots/p3-r2-ping-fail.png)
-![Phase 3 Missing Network](./screenshots/p3-missing-network.png)
-![Phase 3 R2 Ping Success](./screenshots/p3-r2-ping-success.png)
+![Phase 3 R2 Ping Fail](./screenshots/p3-r2-ping-fail.png) Phase 3 R2 Ping Fail
+
+![Phase 3 Missing Network](./screenshots/p3-missing-network.png) Phase 3 Missing Network
+
+![Phase 3 R2 Ping Success](./screenshots/p3-r2-ping-success.png) Phase 3 R2 Ping Success
 
 ---
 
@@ -431,9 +441,11 @@ Immediately:
 * R2 and R3 reinstalled routes
 * My ping succeeded again
 
-![Phase 4 R3 Ping Fail](./screenshots/p4-r3-ping-fail.png)
-![Phase 4 R1 Shut Interface](./screenshots/p4-r1-shut-int.png)
-![Phase 4 R3 Ping Success](./screenshots/p4-r3-ping-success.png)
+![Phase 4 R1 Shut Interface](./screenshots/p4-r1-shut-int.png) Phase 4 R1 Shut Interface
+
+![Phase 4 R3 Ping Fail](./screenshots/p4-r3-ping-fail.png) Phase 4 R3 Ping Fail
+
+![Phase 4 R3 Ping Success](./screenshots/p4-r3-ping-success.png) Phase 4 R3 Ping Success
 
 
 ---
