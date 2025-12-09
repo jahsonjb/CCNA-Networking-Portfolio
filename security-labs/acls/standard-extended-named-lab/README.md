@@ -72,8 +72,8 @@ Inbound on VLAN 30 sees **traffic FROM VLAN 30**, not traffic *to* VLAN 30.
 
 Outbound on g0/0.30 finally filtered packets *after routing*, successfully blocking VLAN 10 → VLAN 30.
 
-**VLAN 10 Ping Test (Before ACL Enforcement)**
-![p1-vlan10-ping](./screenshots/p1-vlan10-ping.png)
+**Standard ACL Configuration**
+![p1-standard-acl-config](./screenshots/p1-standard-acl-config.png)
 
 **Incorrect ACL Placement (Inbound on VLAN 30)**
 ![p1-standard-acl-applied](./screenshots/p1-standard-acl-applied.png)
@@ -81,8 +81,9 @@ Outbound on g0/0.30 finally filtered packets *after routing*, successfully block
 **Corrected ACL Placement (Outbound on VLAN 30)**
 ![p1-corrected-placement-standard-acl](./screenshots/p1-corrected-placement-standard-acl.png)
 
-**Standard ACL Configuration**
-![p1-standard-acl-config](./screenshots/p1-standard-acl-config.png)
+**VLAN 10 Ping Test (After Corrected ACL Enforcement & Placement)**
+![p1-vlan10-ping](./screenshots/p1-vlan10-ping.png)
+
 
 ---
 
