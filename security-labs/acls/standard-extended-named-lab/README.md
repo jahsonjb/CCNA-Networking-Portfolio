@@ -123,6 +123,8 @@ SSH must be functional before ACL testing; otherwise, the router gives misleadin
 SSH was configured:
 
 ```
+enable secret password
+
 ip domain-name lab.local
 crypto key generate rsa modulus 2048
 username admin secret password
