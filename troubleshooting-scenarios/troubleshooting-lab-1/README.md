@@ -81,11 +81,11 @@ A wrong default gateway stops packets at the source. Before I troubleshoot VLANs
 
 ![Topology](./screenshots/topology.png) Topology
 
+![Phase 1 Wrong Gateway](./screenshots/p1-pc-wrong-gateway.png) Phase 1 Wrong Gateway
+
 ![Phase 1 PC Ping Fail](./screenshots/p1-pc-ping-fail.png) Phase 1 PC Ping Fail
 
 ![Phase 1 CPT Simulation Mode](./screenshots/p1-cpt-sim-mode.png) Phase 1 CPT Simulation Mode
-
-![Phase 1 Wrong Gateway](./screenshots/p1-pc-wrong-gateway.png) Phase 1 Wrong Gateway
 
 ![Phase 1 Ping Success](./screenshots/p1-pc-ping-success.png) Phase 1 Ping Success
 
@@ -194,9 +194,10 @@ After that:
 
 ![Phase 2 VLAN 10 Ping Fail](./screenshots/p2-vlan10-pingfail.png) Phase 2 VLAN 10 Ping Fail
 
+![Phase 2 Switchport Correction](./screenshots/p2-correct-sw-config.png) Phase 2 Switchport Correction
+
 ![Phase 2 Ping Success #1](./screenshots/p2-ping-success.png) Phase 2 Ping Success
 
-![Phase 2 Switchport Correction](./screenshots/p2-correct-sw-config.png) Phase 2 Switchport Correction
 
 ---
 
@@ -321,9 +322,9 @@ Immediately:
 * OSPF tables updated
 * Pings to `192.168.20.1` succeeded again
 
-![Phase 3 R2 Ping Fail](./screenshots/p3-r2-ping-fail.png) Phase 3 R2 Ping Fail
-
 ![Phase 3 Missing Network](./screenshots/p3-missing-network.png) Phase 3 Missing Network
+
+![Phase 3 R2 Ping Fail](./screenshots/p3-r2-ping-fail.png) Phase 3 R2 Ping Fail
 
 ![Phase 3 R2 Ping Success](./screenshots/p3-r2-ping-success.png) Phase 3 R2 Ping Success
 
