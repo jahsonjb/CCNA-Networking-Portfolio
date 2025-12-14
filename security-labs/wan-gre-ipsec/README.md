@@ -154,3 +154,100 @@ Future improvements to this lab could include:
 
 This project reflects real-world enterprise WAN patterns and emphasizes not only implementation, but also validation, documentation, and design intent. It demonstrates an understanding of layered networking, routing discipline, and security best practices.
 ---
+
+Network Topology
+
+Topology Diagram
+
+Shows the overall WAN design, including the ISP underlay, the GRE overlay tunnel between HQ and Branch, and where IPsec is applied to protect GRE traffic over the underlay.
+
+![wan-gre-ipsec-topology](./screenshots/topology.png)
+
+Underlay Reachability
+
+HQ Underlay Route Check
+
+Confirms HQ can reach the Branch tunnel endpoint across the ISP underlay using tight routing (no default route)
+
+![hq-show-ip-route](./screenshots/hq-show-ip-route.png)
+
+Underlay Reachability
+
+Branch Underlay Route Check
+
+Confirms Branch can reach the HQ tunnel endpoint across the ISP underlay using tight routing (no default route).
+![br-show-ip-route](./screenshots/br-show-ip-route.png)
+
+GRE Overlay Validation
+
+GRE Tunnel Interface Status
+
+Verifies Tunnel0 is up and passing traffic, confirming the overlay is operational on top of the underlay.
+![show-int-tunnel](./screenshots/show-int-tunnel.png)
+
+OSPF Over GRE Validation
+
+OSPF Neighbor Adjacency
+
+Confirms OSPF forms a neighbor relationship across the GRE tunnel and not on the WAN underlay.
+
+![show-ip-ospf-neighbor](./screenshots/show-ip-ospf-neighbor.png)
+
+OSPF Interface Participation Summary
+
+Validates intended OSPF behavior, showing where OSPF is enabled and helping confirm passive interface design.
+
+![show-ip-ospf-int-brief](./screenshots/show-ip-ospf-int-brief.png)
+
+OSPF Learned Routes
+
+Shows routes learned dynamically via OSPF over the GRE overlay, proving LAN route exchange between sites.
+
+![show-ip-route-ospf](./screenshots/show-ip-route-ospf.png)
+
+End-to-End Connectivity
+
+PC Ping and Traceroute Validation
+
+Demonstrates successful end-to-end communication between LANs and confirms traffic flow across the overlay path.
+
+![pc1-ping-traceroute](./screenshots/pc1-ping-traceroute.png)
+
+Packet Capture Validation (Reference)
+
+GRE Encapsulation Capture
+
+Reference packet capture showing GRE encapsulation behavior for validation and comparison purposes.
+
+![gre-capture](./screenshots/gre-capture.png)
+
+OSPF Inside GRE
+
+Shows OSPF packets encapsulated inside the GRE tunnel, confirming the routing protocol is carried by the overlay.
+
+![ospf-inside-gre](./screenshots/ospf-inside-gre.png)
+
+IPsec Added Toward the End of the Lab
+
+Crypto ACL for “GRE Only” Encryption Scope
+Confirms the encryption policy matches GRE traffic between tunnel endpoints, ensuring IPsec protects the tunnel traffic rather than directly encrypting LAN subnets.
+
+ISAKMP Phase 1 Established
+Validates Phase 1 negotiation and authenticated peer establishment prior to Phase 2 encryption.
+
+IPsec Phase 2 Security Associations
+Confirms active IPsec encryption of GRE traffic, typically validated by active SAs and increasing encapsulation and decapsulation counters.
+
+ESP Observed on the Underlay
+Wireshark capture showing ESP traffic on the ISP-facing link, confirming the underlay only sees encrypted packets and not internal addressing or GRE headers.
+
+![show-access-lists](./screenshots/show-access-lists.png)
+
+![ISAKMP-P1](./screenshots/show-ipsec-p1.png)
+
+![show-ipsec-p2](./screenshots/show-ipsec-p2.png)
+
+![esp](./screenshots/esp.png)
+
+
+
