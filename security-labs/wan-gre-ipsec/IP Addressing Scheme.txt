@@ -1,0 +1,52 @@
+## IP Addressing Scheme
+
+The following IP addressing scheme was designed to clearly separate **underlay WAN transport**, **overlay tunneling**, and **site LAN networks**. Address ranges were chosen to be simple, readable, and consistent with common enterprise WAN designs.
+
+### Underlay, Overlay, and LAN Addressing
+
+| Layer        | Device / Site | Interface             | Subnet          | IP Address   | Notes                                     |
+| ------------ | ------------- | --------------------- | --------------- | ------------ | ----------------------------------------- |
+| Underlay WAN | HQ Router     | GigabitEthernet0/0    | 10.0.10.0/30    | 10.0.10.1    | HQ WAN-facing IP toward ISP               |
+| Underlay WAN | ISP Router    | GigabitEthernet0/0    | 10.0.10.0/30    | 10.0.10.2    | ISP next hop for HQ                       |
+| Underlay WAN | Branch Router | GigabitEthernet0/0    | 10.0.20.0/30    | 10.0.20.1    | Branch WAN-facing IP toward ISP           |
+| Underlay WAN | ISP Router    | GigabitEthernet0/1    | 10.0.20.0/30    | 10.0.20.2    | ISP next hop for Branch                   |
+| Overlay GRE  | HQ Router     | Tunnel0               | 172.16.1.0/24   | 172.16.1.1   | GRE tunnel IP (OSPF adjacency forms here) |
+| Overlay GRE  | Branch Router | Tunnel0               | 172.16.1.0/24   | 172.16.1.2   | GRE tunnel IP (OSPF adjacency forms here) |
+| HQ LAN       | HQ Router     | GigabitEthernet0/1.10 | 192.168.10.0/24 | 192.168.10.1 | Default gateway for HQ users              |
+| Branch LAN   | Branch Router | GigabitEthernet0/1.20 | 192.168.20.0/24 | 192.168.20.1 | Default gateway for Branch users          |
+
+---
+
+### LAN Host Addressing (Suggested)
+
+| Site   | Subnet          | Default Gateway | Static / Reserved Range    | DHCP Range                   |
+| ------ | --------------- | --------------- | -------------------------- | ---------------------------- |
+| HQ     | 192.168.10.0/24 | 192.168.10.1    | 192.168.10.2–192.168.10.49 | 192.168.10.50–192.168.10.200 |
+| Branch | 192.168.20.0/24 | 192.168.20.1    | 192.168.20.2–192.168.20.49 | 192.168.20.50–192.168.20.200 |
+
+---
+
+### Underlay Routing Requirements
+
+The underlay network is intentionally minimal and does not use a default route. Each router has a **host route** pointing only to the remote GRE tunnel endpoint via the ISP router.
+
+| Router | Destination | Mask | Next Hop  | Purpose                      |
+| ------ | ----------- | ---- | --------- | ---------------------------- |
+| HQ     | 10.0.20.1   | /32  | 10.0.10.2 | Reach Branch tunnel endpoint |
+| Branch | 10.0.10.1   | /32  | 10.0.20.2 | Reach HQ tunnel endpoint     |
+
+---
+
+### Addressing Design Rationale
+
+* **/30 subnets** are used on WAN links to conserve address space and clearly define point-to-point connectivity.
+* **Separate /30 networks** are used for each site’s ISP connection, reflecting a realistic provider handoff model.
+* The **GRE overlay** uses a dedicated subnet to support routing adjacency and overlay traffic isolation.
+* **LAN subnets** are site-specific and exchanged dynamically over OSPF running inside the GRE tunnel.
+* Tight host routes are used instead of a default route to keep the underlay scoped strictly to tunnel reachability.
+
+This addressing scheme reinforces clean separation between the physical WAN transport and the logical routed overlay while remaining simple to troubleshoot and extend.
+
+---
+
+
