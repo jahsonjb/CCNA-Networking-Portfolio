@@ -220,6 +220,83 @@ This lab reflects real enterprise access-layer incidents such as desk moves, dev
 
 Completed and validated.  
 This lab is part of my ongoing **enterprise switching and network security portfolio**.
+
+---
+
+## Verification Screenshots
+
+The following screenshots provide visual verification of each phase of the lab.  
+All images are stored in the repository under the `screenshots/` directory and are referenced here in execution order.
+
+---
+
+### Network Topology
+
+![topology](./screenshots/topology.png)
+
+---
+
+### Phase 1 — Baseline Connectivity
+
+- MAC address table before security controls  
+  ![p1-sh-mac-add](./screenshots/p1-sh-mac-add.png)
+
+- PC3 successful connectivity test  
+  ![p1-pc3-ping](./screenshots/p1-pc3-ping.png)
+
+---
+
+### Phase 2 — Sticky MAC Learning
+
+- Interface configuration showing sticky MAC learning  
+  ![p2-show-run](./screenshots/p2-show-run.png)
+
+- Port security status with learned MAC  
+  ![p2-port-sec-status](./screenshots/p2-port-sec-status.png)
+
+- MAC address table showing STATIC entry  
+  ![p2-show-mac](./screenshots/p2-show-mac.png)
+
+- Authorized host connectivity confirmed  
+  ![p2-pc1-ping](./screenshots/p2-pc1-ping.png)
+
+---
+
+### Phase 3 — Port Security Violation Modes
+
+- Baseline connectivity from Linux-PC2  
+  ![p3-pc2-ping](./screenshots/p3-pc2-ping.png)
+
+- Port security MAC details prior to violation  
+  ![p3-show-mac-portsecurity](./screenshots/p3-show-mac-portsecurity.png)
+
+- Interface configuration before violation testing  
+  ![p3-show-run](./screenshots/p3-show-run.png)
+
+- Connectivity failure after MAC address change  
+  ![p3-pc2-ping-fail](./screenshots/p3-pc2-ping-fail.png)
+
+- Protect mode enabled (silent enforcement)  
+  ![p3-portsecurity-protect](./screenshots/p3-portsecurity-protect.png)
+
+- Restrict mode enabled (violations logged)  
+  ![p3-portsecurity-restrict](./screenshots/p3-portsecurity-restrict.png)
+
+- Shutdown mode enabled (interface err-disabled)  
+  ![p3-portsecurity-shutdown](./screenshots/p3-portsecurity-shutdown.png)
+
+- Interface down / err-disabled state  
+  ![p3-port-down](./screenshots/p3-port-down.png)
+
+---
+
+### Phase 4 — Recovery & Troubleshooting
+
+- Interface recovery attempt and validation  
+  ![p3-recovery](./screenshots/p3-recovery.png)
+
+---
+
 ```
 
 ---
