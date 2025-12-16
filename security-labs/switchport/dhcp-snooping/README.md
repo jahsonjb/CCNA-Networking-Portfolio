@@ -97,6 +97,61 @@ show interfaces trunk
 
 ---
 
+### Network Topology
+
+![topology](./screenshots/topology.png)
+
+---
+
+### Phase 1 — DHCP Config
+
+- DHCP pool on legit server 
+  ![p1](./screenshots/cisco-pool.png)
+
+- DHCP pool on rogue server 
+  ![p1](./screenshots/rogue-pool.png)
+
+---
+
+### Phase 2 — IP DHCP Snooping Config on Core and Access Switches
+
+- Show Run Interface Config on Core Switch  
+  ![p2](./screenshots/core-dhcp-snooping.png)
+
+- Show commands on Core
+  ![p2](./screenshots/core-verify.png)
+
+- Show Run Interface Config on Access Switch  
+  ![p2](./screenshots/access-dhcp-snooping.png)
+
+- Show commands on Access  
+  ![p2](./screenshots/access-verify.png)
+
+---
+
+### Phase 3 — DHCP Captures on Wireshark and IP handouts
+
+- Packet capture of DHCP
+  ![p3](./screenshots/dhcp-process-capture.png)
+
+- PC in VLAN 10 successfully acquired an IP 4 address 
+  ![p3](./screenshots/pc2-ip-confirmation.png)
+
+- Database of IP address and MAC address pairs for devices that have successfully completed a DHCP transaction.
+  ![p3](./screenshots/snooping-binding.png)
+
+---
+
+### Phase 4 — Intentionally Misconfiguration
+
+- Packet capture of rogue DHCP in action
+  ![p4](./screenshots/rogue-capture.png)
+
+- PC in VLAN 10 acquired a IP 4 address from illegitimate server  
+  ![p4](./screenshots/pc3-ip-from-rogue.png)
+
+---
+
 ## 📌 Conclusion
 This lab highlights the importance of DHCP snooping trust boundaries:
 - In **Phase 1**, snooping worked as intended: rogue offers were blocked.  
