@@ -102,4 +102,3 @@ This lab highlights the importance of DHCP snooping trust boundaries:
 - In **Phase 1**, snooping worked as intended: rogue offers were blocked.  
 - In **Phase 2**, the rogue server was intentionally trusted, showing how quickly it can take over client leases.  
 - **Key takeaway:** Correct trust configuration is critical — trusting the wrong port completely defeats DHCP snooping.
-```
