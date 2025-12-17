@@ -298,5 +298,3 @@ All images are stored in the repository under the `screenshots/` directory and a
 ---
 
 ```
-
----
