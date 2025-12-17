@@ -1,4 +1,4 @@
-### DAI + DHCP Snooping Lab — Updated README
+### DAI + DHCP Snooping Lab
 
 ---
 
@@ -101,6 +101,41 @@ show mac address-table
 ```
 
 ---
+
+### Network Topology 
+
+![topology](./screenshots/topology.png)
+
+---
+
+### Phase 1 — DAI Config
+
+- DAI config on access-switch 
+  ![p1](./screenshots/DAI-Config.png)
+
+- Baseline ip arp inspections stats
+  ![p1](./screenshots/show-commands.png)
+
+- Successful ping from PC2 to PC1
+  ![p1](./screenshots/pc2-ping.png)
+---
+
+### Phase 2 — Deliberate mac address change
+
+- Changing the mac address in the CLI  
+  ![p2](./screenshots/chg-mac-add.png)
+
+- Failed ping from pc2 to pc1
+  ![p2](./screenshots/pc2-ping-fail.png)
+
+- Arp capture on Wireshark  
+  ![p2](./screenshots/arp-capture.png)
+
+- DAI stats after violation  
+  ![p2](./screenshots/sw-ip-arp-inspec-stats.png)
+
+---
+
 
 ### ✅ Lessons Learned
 - DAI depends on DHCP Snooping bindings; mismatched MAC/IP pairs are dropped.  
