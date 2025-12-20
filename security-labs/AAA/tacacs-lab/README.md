@@ -1,4 +1,4 @@
-# Tacacs Lab – Cisco Packet Tracer
+# Tacacs+ Lab – Cisco Packet Tracer
 
 This project demonstrates a simple **AAA (Authentication, Authorization, and Accounting)** lab using **Cisco Packet Tracer**. The goal was to show how a router can authenticate administrative access using a centralized **TACACS+ AAA server** instead of local credentials.
 
