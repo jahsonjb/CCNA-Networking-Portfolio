@@ -100,6 +100,35 @@ show running-config | section vty
 
 These outputs confirmed that AAA, TACACS+, and VTY authentication were configured as expected.
 
+## 📸 Screenshots
+
+### **topology.png**  
+![Topology](screenshots/topology.png)  
+Shows the full Packet Tracer topology connecting the PC, AAA server, switch, and R1 in the 192.168.1.0/24 network.
+
+### **AAA-server-config.png**  
+![AAA Server Config](screenshots/AAA-server-config.png)  
+Displays the AAA server’s TACACS+ configuration, including client settings and user credentials.
+
+### **r1-aaa-config.png**  
+![R1 AAA Config](screenshots/r1-aaa-config.png)  
+Shows the AAA and TACACS+ configuration applied on Router R1.
+
+### **telnet-client.png**  
+![Telnet Client](screenshots/telnet-client.png)  
+Captures the PC initiating a Telnet session to R1 using TACACS+ authentication.
+
+### **telnet-success.png**  
+![Telnet Success](screenshots/telnet-success.png)  
+Confirms successful TACACS+ login to R1 with the configured admin credentials.
+
+### **show-run-aaa.png**  
+![Show Run AAA](screenshots/show-run-aaa.png)  
+Displays R1’s running configuration section related to AAA.
+
+### **show-run-tacacs.png**  
+![Show Run TACACS](screenshots/show-run-tacacs-vty-config.png)  
+Displays R1’s running configuration section related to TACACS+ server and vty settings.
 ---
 
 ## 📘 Summary
