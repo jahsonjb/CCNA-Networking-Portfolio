@@ -17,6 +17,7 @@ The lab consists of four devices connected through a Layer 2 switch:
 
 All devices reside in the **192.168.1.0/24** network.
 
+The enable secret is cisco123 on R1
 ---
 
 ## ✅ Step 1: Verify Basic Connectivity
